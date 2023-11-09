@@ -30,7 +30,7 @@
         <div class="container">    
             <table style="width:98%">
                 <tr>
-                    <th style="width: 20px;"><button>id</button></th>
+                    <th style="width: 40px;"><button>id</button></th>
                     <th style="width: 80px;">clipped date</th>
                     <th style="width: 80px;">genotyped</th>
                     <th style="width: 80px;">genotyper</th>
@@ -44,11 +44,14 @@
                     <th style="width: 30px;">cre1</th>
                     <th style="width: 30px;">cre2</th>
                     <th style="width: 50px;">gasp</th>
-                    <img src="/感叹号.jpg" alt="Not found" width="5px" height="5px">
+                    
                 </tr>
                 {% for x in mymice %}
                 <tr>
-                    <td style="width: 50px;">{{ x.id }}</td>
+                    <td style="width: 20px;">
+                        {{ x.id }}
+                        <img src="{% static "images/gan.jpg" %}" alt="Not found" width="12px" height="12px" float:"right" title="mice details">
+                    </td>
                     <td style="width: 80px;">{{ x.clippedDate }}</td>
                     <td style="width: 80px;">{{ x.genotypedOrNot }}</td>
                     <td style="width: 80px;">{{ x.genotyper }}</td>
