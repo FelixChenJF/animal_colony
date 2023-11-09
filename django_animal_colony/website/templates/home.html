@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Pilot</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Mouse Pilot</h1>
+    </div>
+    <div class="filter">
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#">setting x</a>
+        <a href="#" style="float:right">Clear Filter</a>
+        <a href="#" style="float:right">Apply Filter</a>
+    </div>
+    
+    <div style="overflow-x:auto;">
+        <div class="container">    
+            <table style="width:98%">
+                <tr>
+                    <th style="width: 20px;"><button>id</button></th>
+                    <th style="width: 80px;">clipped date</th>
+                    <th style="width: 80px;">genotyped</th>
+                    <th style="width: 80px;">genotyper</th>
+                    <th style="width: 80px;">earmark</th>
+                    <th style="width: 30px;">sex</th>
+                    <th style="width: 30px;">box</th>
+                    <th style="width: 80px;">dob</th>
+                    <th>mother</th>
+                    <th style="width: 130px;">father</th>
+                    <th style="width: 230px;">strain</td>
+                    <th style="width: 30px;">cre1</th>
+                    <th style="width: 30px;">cre2</th>
+                    <th style="width: 50px;">gasp</th>
+                </tr>
+                {% for x in mymice %}
+                <tr>
+                    <td style="width: 20px;">{{ x.id }}</td>
+                    <td style="width: 80px;">{{ x.clippedDate }}</td>
+                    <td style="width: 80px;">{{ x.genotypedOrNot }}</td>
+                    <td style="width: 80px;">{{ x.genotyper }}</td>
+                    <td style="width: 80px;">{{ x.earmark }}</td>
+                    <td style="width: 30px;">{{ x.sex }}</td>
+                    <td style="width: 30px;">{{ x.box }}</td>
+                    <td style="width: 80px;">{{ x.dob }}</td>
+                    <td>{{ x.mother }}</td>
+                    <td style="width: 130px;">{{ x.father }}</td>
+                    <td style="width: 230px;">{{ x.strain }}</td>
+                    <td style="width: 30px;">{{ x.cre1 }}</td>
+                    <td style="width: 30px;">{{ x.cre2 }}</td>
+                    <td style="width: 50px;">{{ x.gasp }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    
+        </div>    
+        
+    </div>    
+   
+</body>
+</html>

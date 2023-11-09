@@ -1,0 +1,64 @@
+div {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.header {
+    background-color: beige;
+    text-align: center;
+    padding: 20px;
+}
+
+.filter {
+    overflow: hidden;
+    background-color: beige;
+}
+
+.filter a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.filter a:hover {
+    background-color: #685a49;
+    color: beige;
+}
+
+.container {
+    background-color: beige;
+    float: center;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+
+}
+
+th {
+    background-color: #918151;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    vertical-align: bottom;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {background-color: #faf0e6;}
+tr:nth-child(odd) {background-color: #e3dac9;}
