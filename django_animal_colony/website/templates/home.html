@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="header">
+        {% comment %} <img src="{% static "images/mice.jpg" %}" alt="Not found" width="50px" height="50px"> {% endcomment %}
         <h1>Mouse Pilot</h1>
     </div>
 
@@ -30,7 +31,7 @@
         <div class="container">    
             <table style="width:98%">
                 <tr>
-                    <th style="width: 40px;"><button>id</button></th>
+                    <th style="width: 20px;"><button>id</button></th>
                     <th style="width: 80px;">clipped date</th>
                     <th style="width: 80px;">genotyped</th>
                     <th style="width: 80px;">genotyper</th>
@@ -50,7 +51,7 @@
                 <tr>
                     <td style="width: 20px;">
                         {{ x.id }}
-                        <img src="{% static "images/gan.jpg" %}" alt="Not found" width="12px" height="12px" float:"right" title="mice details">
+                        {% comment %} <img src="{% static "images/gan.jpg" %}" alt="Not found" width="12px" height="12px" float:"right" title="mice details"> {% endcomment %}
                     </td>
                     <td style="width: 80px;">{{ x.clippedDate }}</td>
                     <td style="width: 80px;">{{ x.genotypedOrNot }}</td>
